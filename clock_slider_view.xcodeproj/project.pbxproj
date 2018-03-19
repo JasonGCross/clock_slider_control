@@ -13,6 +13,23 @@
 		F6B6845C205F43930058595B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B6845B205F43930058595B /* Assets.xcassets */; };
 		F6B6845F205F43930058595B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B6845D205F43930058595B /* LaunchScreen.storyboard */; };
 		F6B6846A205F43930058595B /* clock_slider_viewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68469205F43930058595B /* clock_slider_viewTests.swift */; };
+		F6B68476205F45C20058595B /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68475205F45C20058595B /* TimeOfDay.swift */; };
+		F6B68478205F45F00058595B /* DayOrNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68477205F45F00058595B /* DayOrNight.swift */; };
+		F6B6847A205F46250058595B /* ClockQuadrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68479205F46250058595B /* ClockQuadrant.swift */; };
+		F6B6847C205F464D0058595B /* ClockRotationCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B6847B205F464D0058595B /* ClockRotationCount.swift */; };
+		F6B6847E205F466E0058595B /* BaseClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B6847D205F466E0058595B /* BaseClockModel.swift */; };
+		F6B68480205F468E0058595B /* DoubleHand24HourClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B6847F205F468E0058595B /* DoubleHand24HourClockModel.swift */; };
+		F6B68482205F46B20058595B /* DoubleHand12HourClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68481205F46B20058595B /* DoubleHand12HourClockModel.swift */; };
+		F6B68484205F46C80058595B /* SingleHand24HourClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68483205F46C80058595B /* SingleHand24HourClockModel.swift */; };
+		F6B68486205F46E70058595B /* SingleHand12HourClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68485205F46E70058595B /* SingleHand12HourClockModel.swift */; };
+		F6B68489205F472E0058595B /* ClockSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68488205F472E0058595B /* ClockSliderView.swift */; };
+		F6B6848B205F474C0058595B /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B6848A205F474C0058595B /* ThumbnailView.swift */; };
+		F6B6848D205F47660058595B /* TimeRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B6848C205F47660058595B /* TimeRangeSlider.swift */; };
+		F6B68490205F47920058595B /* CGPoint+closestInterceptPointToCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B6848F205F47920058595B /* CGPoint+closestInterceptPointToCircle.swift */; };
+		F6B68492205F47AC0058595B /* CGPoint+distanceToPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68491205F47AC0058595B /* CGPoint+distanceToPoint.swift */; };
+		F6B68494205F47C50058595B /* NSString+drawWithBasePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68493205F47C50058595B /* NSString+drawWithBasePoint.swift */; };
+		F6B68496205F47E30058595B /* TouchableLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68495205F47E30058595B /* TouchableLayer.swift */; };
+		F6B68498205F47FD0058595B /* ClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B68497205F47FD0058595B /* ClockFaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +53,23 @@
 		F6B68465205F43930058595B /* clock_slider_viewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clock_slider_viewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B68469205F43930058595B /* clock_slider_viewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clock_slider_viewTests.swift; sourceTree = "<group>"; };
 		F6B6846B205F43930058595B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6B68475205F45C20058595B /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
+		F6B68477205F45F00058595B /* DayOrNight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOrNight.swift; sourceTree = "<group>"; };
+		F6B68479205F46250058595B /* ClockQuadrant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockQuadrant.swift; sourceTree = "<group>"; };
+		F6B6847B205F464D0058595B /* ClockRotationCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockRotationCount.swift; sourceTree = "<group>"; };
+		F6B6847D205F466E0058595B /* BaseClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClockModel.swift; sourceTree = "<group>"; };
+		F6B6847F205F468E0058595B /* DoubleHand24HourClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleHand24HourClockModel.swift; sourceTree = "<group>"; };
+		F6B68481205F46B20058595B /* DoubleHand12HourClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleHand12HourClockModel.swift; sourceTree = "<group>"; };
+		F6B68483205F46C80058595B /* SingleHand24HourClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHand24HourClockModel.swift; sourceTree = "<group>"; };
+		F6B68485205F46E70058595B /* SingleHand12HourClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHand12HourClockModel.swift; sourceTree = "<group>"; };
+		F6B68488205F472E0058595B /* ClockSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockSliderView.swift; sourceTree = "<group>"; };
+		F6B6848A205F474C0058595B /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		F6B6848C205F47660058595B /* TimeRangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRangeSlider.swift; sourceTree = "<group>"; };
+		F6B6848F205F47920058595B /* CGPoint+closestInterceptPointToCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+closestInterceptPointToCircle.swift"; sourceTree = "<group>"; };
+		F6B68491205F47AC0058595B /* CGPoint+distanceToPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+distanceToPoint.swift"; sourceTree = "<group>"; };
+		F6B68493205F47C50058595B /* NSString+drawWithBasePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+drawWithBasePoint.swift"; sourceTree = "<group>"; };
+		F6B68495205F47E30058595B /* TouchableLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableLayer.swift; sourceTree = "<group>"; };
+		F6B68497205F47FD0058595B /* ClockFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockFaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +111,10 @@
 		F6B68453205F43930058595B /* clock_slider_view */ = {
 			isa = PBXGroup;
 			children = (
+				F6B6848E205F477C0058595B /* extensions */,
+				F6B68487205F47070058595B /* view */,
+				F6B684AF205F4BFA0058595B /* control */,
+				F6B68474205F45A70058595B /* model */,
 				F6B68454205F43930058595B /* AppDelegate.swift */,
 				F6B68456205F43930058595B /* ViewController.swift */,
 				F6B68458205F43930058595B /* Main.storyboard */,
@@ -94,6 +132,51 @@
 				F6B6846B205F43930058595B /* Info.plist */,
 			);
 			path = clock_slider_viewTests;
+			sourceTree = "<group>";
+		};
+		F6B68474205F45A70058595B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F6B6847D205F466E0058595B /* BaseClockModel.swift */,
+				F6B68479205F46250058595B /* ClockQuadrant.swift */,
+				F6B6847B205F464D0058595B /* ClockRotationCount.swift */,
+				F6B68477205F45F00058595B /* DayOrNight.swift */,
+				F6B68481205F46B20058595B /* DoubleHand12HourClockModel.swift */,
+				F6B6847F205F468E0058595B /* DoubleHand24HourClockModel.swift */,
+				F6B68485205F46E70058595B /* SingleHand12HourClockModel.swift */,
+				F6B68483205F46C80058595B /* SingleHand24HourClockModel.swift */,
+				F6B68475205F45C20058595B /* TimeOfDay.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F6B68487205F47070058595B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F6B68497205F47FD0058595B /* ClockFaceView.swift */,
+				F6B68488205F472E0058595B /* ClockSliderView.swift */,
+				F6B6848A205F474C0058595B /* ThumbnailView.swift */,
+				F6B68495205F47E30058595B /* TouchableLayer.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F6B6848E205F477C0058595B /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6B6848F205F47920058595B /* CGPoint+closestInterceptPointToCircle.swift */,
+				F6B68491205F47AC0058595B /* CGPoint+distanceToPoint.swift */,
+				F6B68493205F47C50058595B /* NSString+drawWithBasePoint.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		F6B684AF205F4BFA0058595B /* control */ = {
+			isa = PBXGroup;
+			children = (
+				F6B6848C205F47660058595B /* TimeRangeSlider.swift */,
+			);
+			path = control;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +282,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B68478205F45F00058595B /* DayOrNight.swift in Sources */,
+				F6B68476205F45C20058595B /* TimeOfDay.swift in Sources */,
+				F6B68486205F46E70058595B /* SingleHand12HourClockModel.swift in Sources */,
+				F6B68496205F47E30058595B /* TouchableLayer.swift in Sources */,
+				F6B68484205F46C80058595B /* SingleHand24HourClockModel.swift in Sources */,
+				F6B68482205F46B20058595B /* DoubleHand12HourClockModel.swift in Sources */,
+				F6B6848B205F474C0058595B /* ThumbnailView.swift in Sources */,
+				F6B6847C205F464D0058595B /* ClockRotationCount.swift in Sources */,
+				F6B68489205F472E0058595B /* ClockSliderView.swift in Sources */,
+				F6B68490205F47920058595B /* CGPoint+closestInterceptPointToCircle.swift in Sources */,
+				F6B6847E205F466E0058595B /* BaseClockModel.swift in Sources */,
+				F6B68480205F468E0058595B /* DoubleHand24HourClockModel.swift in Sources */,
 				F6B68457205F43930058595B /* ViewController.swift in Sources */,
+				F6B68494205F47C50058595B /* NSString+drawWithBasePoint.swift in Sources */,
+				F6B6847A205F46250058595B /* ClockQuadrant.swift in Sources */,
 				F6B68455205F43930058595B /* AppDelegate.swift in Sources */,
+				F6B6848D205F47660058595B /* TimeRangeSlider.swift in Sources */,
+				F6B68498205F47FD0058595B /* ClockFaceView.swift in Sources */,
+				F6B68492205F47AC0058595B /* CGPoint+distanceToPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
