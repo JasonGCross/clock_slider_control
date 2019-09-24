@@ -4,6 +4,8 @@
 
 This sample iOS project contains a single view with a custom control, a Clock Slider Control. This control is similar in appearance to the circular clock found inside the native Clock app, on the Bedtime tab.
 
+<img alt="screen shot of clock control" width="414" height="896" src="media/SimulatorScreenShot-iPhone11ProMax-2019-09-24at12.09.18.png" />
+
 The control provides the ability for the user to specify a range of time, in hours, via dragging sliders around the circumference of a circle (clock face). The start time can be fixed or can be changeable by the user.
 
 The clock can be fixed to allow only up to a single 12 hour revolution, or up to 24 hours (2 revolutions). The color changes when the user passes the 12-hour boundary.
