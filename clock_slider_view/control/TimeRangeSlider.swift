@@ -70,7 +70,7 @@ class TimeRangeSlider: UIControl {
     @IBInspectable
     var clockFaceTextSize: Float = 14 {
         willSet {
-            clockFaceFontAttributes[NSAttributedStringKey.font] = UIFont(name: self.clockFaceFont.fontName,
+            clockFaceFontAttributes[NSAttributedString.Key.font] = UIFont(name: self.clockFaceFont.fontName,
                                                                          size: CGFloat(newValue))
         }
     }
@@ -78,7 +78,7 @@ class TimeRangeSlider: UIControl {
     @IBInspectable
     var elapsedTimeTextSize: Float = 20 {
         willSet {
-            elapsedTimeFontAttributes[NSAttributedStringKey.font] = UIFont(name: self.elapsedTimeFont.fontName,
+            elapsedTimeFontAttributes[NSAttributedString.Key.font] = UIFont(name: self.elapsedTimeFont.fontName,
                                                                            size: CGFloat(newValue))
         }
     }
@@ -92,7 +92,7 @@ class TimeRangeSlider: UIControl {
                                               blue: 0.380,
                                               alpha: 1.00) {
         willSet {
-            clockFaceFontAttributes[NSAttributedStringKey.foregroundColor] = newValue
+            clockFaceFontAttributes[NSAttributedString.Key.foregroundColor] = newValue
         }
     }
     
@@ -102,14 +102,14 @@ class TimeRangeSlider: UIControl {
                                                 blue: 0.380,
                                                 alpha: 1.00) {
         willSet {
-            elapsedTimeFontAttributes[NSAttributedStringKey.foregroundColor] = newValue
+            elapsedTimeFontAttributes[NSAttributedString.Key.foregroundColor] = newValue
         }
     }
     
     @IBInspectable
     var clockFaceFont: UIFont = UIFont.systemFont(ofSize: 14) {
         willSet {
-            clockFaceFontAttributes[NSAttributedStringKey.font] = UIFont(name: newValue.fontName,
+            clockFaceFontAttributes[NSAttributedString.Key.font] = UIFont(name: newValue.fontName,
                                                                          size: CGFloat(self.elapsedTimeTextSize))
         }
     }
@@ -128,7 +128,7 @@ class TimeRangeSlider: UIControl {
     @IBInspectable
     var elapsedTimeFont: UIFont = UIFont.systemFont(ofSize: 20) {
         willSet {
-            elapsedTimeFontAttributes[NSAttributedStringKey.font] = UIFont(name: newValue.fontName,
+            elapsedTimeFontAttributes[NSAttributedString.Key.font] = UIFont(name: newValue.fontName,
                                                                            size: CGFloat(self.elapsedTimeTextSize))
         }
     }
@@ -144,13 +144,13 @@ class TimeRangeSlider: UIControl {
         }
     }
     
-    var clockFaceFontAttributes: [NSAttributedStringKey : AnyObject] = [NSAttributedStringKey : AnyObject]() {
+    var clockFaceFontAttributes: [NSAttributedString.Key : AnyObject] = [NSAttributedString.Key : AnyObject]() {
         willSet {
             self.clockFaceView?.fontAttributes = newValue
         }
     }
     
-    var elapsedTimeFontAttributes: [NSAttributedStringKey : AnyObject] = [NSAttributedStringKey : AnyObject]()
+    var elapsedTimeFontAttributes: [NSAttributedString.Key : AnyObject] = [NSAttributedString.Key : AnyObject]()
     
     
     
@@ -332,7 +332,19 @@ class TimeRangeSlider: UIControl {
      * slides the control to read 3:12, then upon the drag motion finishing, the
      * control will round the selected time interval to 3:15
      */
-    var incrementDurationInMinutes: Int = 11
+    @IBInspectable
+    var incrementDurationInMinutes: Int = 5 {
+        didSet {
+            self.startTimeInMinutes = CGFloat(TimeRangeSlider.roundMinutesToMatchIncrementDuration(self.startTimeInMinutes,
+            incrementDuration: self.incrementDurationInMinutes))
+            
+            self.finishTimeInMinutes =  CGFloat(TimeRangeSlider.roundMinutesToMatchIncrementDuration(self.finishTimeInMinutes,
+            incrementDuration: self.incrementDurationInMinutes))
+            
+            self.setNeedsDisplay()
+            self.sendActions(for: UIControl.Event.valueChanged)
+        }
+    }
     
     var startTimeInMinutes: CGFloat {
         set {
@@ -660,7 +672,7 @@ class TimeRangeSlider: UIControl {
         self.setNeedsDisplay()
         
         // 4. Notify observers that the change has taken place
-        self.sendActions(for: UIControlEvents.valueChanged)
+        self.sendActions(for: UIControl.Event.valueChanged)
         
         return true
     }
@@ -695,7 +707,7 @@ class TimeRangeSlider: UIControl {
         }
         
         self.setNeedsDisplay()
-        self.sendActions(for: UIControlEvents.valueChanged)
+        self.sendActions(for: UIControl.Event.valueChanged)
         
         self.startKnobView.isHighlighted = false
         self.finishKnobView.isHighlighted = false

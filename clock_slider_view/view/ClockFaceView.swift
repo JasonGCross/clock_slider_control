@@ -16,7 +16,7 @@ class ClockFaceView: UIView {
                                                      blue: 0.090,
                                                      alpha: 1.00)
     var innerRingBackgroundColor: UIColor = UIColor.black
-    var fontAttributes : [NSAttributedStringKey : AnyObject]
+    var fontAttributes : [NSAttributedString.Key : AnyObject]
     var tickMarkColor : UIColor = UIColor(red: 0.380,
                                           green: 0.380,
                                           blue: 0.380,
@@ -42,11 +42,11 @@ class ClockFaceView: UIView {
         rotationEachHour = CGFloat(CGFloat(2 * Double.pi) / CGFloat(self.numberOfHours))
         
         fontAttributes = [
-            NSAttributedStringKey.foregroundColor : UIColor(red: 0.380,
+            NSAttributedString.Key.foregroundColor : UIColor(red: 0.380,
                                                             green: 0.380,
                                                             blue: 0.380,
                                                             alpha: 1.00),
-            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14)
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)
         ]
         let diameter = CGFloat(fminf(Float(_frame.size.width),
                                      Float(_frame.size.height)))

@@ -19,19 +19,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        sliderControl.incrementDurationInMinutes = 1
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.bindUserInterfaceToSlider(slider: self.sliderControl)
     }
 
     
     @IBAction func sliderValueChanged(sender: TimeRangeSlider) {
-        var startMinutes = sender.startTimeInMinutes
-        var finishMinutes = sender.finishTimeInMinutes
-        let timeSpanMinutes = sender.selectedTimeRangeInMinutes
+        self.bindUserInterfaceToSlider(slider: sender)
+    }
+    
+    private func bindUserInterfaceToSlider(slider: TimeRangeSlider) {
+        var startMinutes = slider.startTimeInMinutes
+        var finishMinutes = slider.finishTimeInMinutes
+        let timeSpanMinutes = slider.selectedTimeRangeInMinutes
         
-        if (sender.startDayOrNightString == DayOrNight.pm.rawValue) {
+        if (slider.startDayOrNightString == DayOrNight.pm.rawValue) {
             startMinutes += CGFloat(720); // one half day equals 12 hours times 60 minutes
         }
-        if (sender.finishDayOrNightString == DayOrNight.pm.rawValue) {
+        if (slider.finishDayOrNightString == DayOrNight.pm.rawValue) {
             finishMinutes += CGFloat(720);
         }
         
@@ -46,13 +54,36 @@ class ViewController: UIViewController {
            let finishDate = calendar.date(from: finishComponents),
            let totalDate = calendar.date(from: totalComponents) else { return }
 
-        let startString = formatter.string(from: startDate) + " \(sender.startDayOrNightString)"
-        let finishString = formatter.string(from: finishDate) + " \(sender.finishDayOrNightString)"
+        let startString = formatter.string(from: startDate) + " \(slider.startDayOrNightString)"
+        let finishString = formatter.string(from: finishDate) + " \(slider.finishDayOrNightString)"
         let totalString = formatter.string(from: totalDate)
         
         self.startLabel.text = startString
         self.endLabel.text = finishString
         self.totalLabel.text = totalString
+    }
+    
+    @IBAction func segmentedControlChanged(sender: UISegmentedControl) {
+        var increments: Int = 1
+        
+        switch (sender.selectedSegmentIndex) {
+        case 0:
+            increments = 1
+        case 1:
+            increments = 5
+        case 2:
+            increments = 10
+        case 3:
+            increments = 15
+        case 4:
+            increments = 30
+        case 5:
+            increments = 60
+        default:
+            increments = 1
+        }
+        
+        self.sliderControl.incrementDurationInMinutes = increments
     }
 
 

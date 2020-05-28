@@ -224,7 +224,7 @@ class ClockSliderView: UIView {
         
         // when the start and finish hands are the same, we want the clock to draw a complete arc,
         // except when the hour is supposed to be zero -- in that case, we don't want any arc drawn
-        if(fabs(drawableEndAngle) < angleEquivalentToOnePixel) {
+        if(abs(drawableEndAngle) < angleEquivalentToOnePixel) {
             if (self.clockDuration > thresholdForAdjustingArcRaduis ){
                 drawableEndAngle -= angleEquivalentToOnePixel
             }

@@ -12,7 +12,7 @@ extension NSString {
     
     func drawWithBasePoint(_ basePoint:CGPoint,
                            angle:CGFloat,
-                           fontAttributes:[NSAttributedStringKey:AnyObject],
+                           fontAttributes:[NSAttributedString.Key:AnyObject],
                            context:CGContext
         ) {
         
