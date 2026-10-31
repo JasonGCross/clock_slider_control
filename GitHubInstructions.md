@@ -17,7 +17,15 @@ Whenever the code is changed inside the library, push it to its own repo like th
 
 ```shell
 git subtree split --prefix=ClockSliderLibrary -b library-only
-git push <NEW_REPO_URL> library-only:main
+git push https://github.com/JasonGCross/ClockSliderLibrary.git library-only:main
+```
+
+Push a  new tag like this:
+
+```shell
+cd ClockSliderLibrary
+git tag -a 1.0.1 -m "Version 1.0.1"
+git push https://github.com/JasonGCross/ClockSliderLibrary.git 1.0.1
 ```
 
 ## History
