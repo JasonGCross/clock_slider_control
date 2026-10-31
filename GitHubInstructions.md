@@ -16,15 +16,9 @@ clock_slider_control/            <- repo root
 Whenever the code is changed inside the library, push it to its own repo like this:
 
 ```shell
-git subtree split --prefix=ClockSliderLibrary -b library-only
-git push https://github.com/JasonGCross/ClockSliderLibrary.git library-only:main
-```
-
-Push a  new tag like this:
-
-```shell
 cd ClockSliderLibrary
-git tag -a 1.0.1 -m "Version 1.0.1"
+git push
+git tag -a 1.0.1 -m "Version 1.0.1 bug fixes"
 git push https://github.com/JasonGCross/ClockSliderLibrary.git 1.0.1
 ```
 
